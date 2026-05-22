@@ -1,64 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Meus objetivos do ano</title>
     <link rel="stylesheet" href="style.css" />
-  </head>
-
-  <body>
-    <section class="conteudo-principal">
-      <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
-      <div class="botoes">
-        <button class="botao">Cursos na Alura</button>
-        <button class="botao">Criar projetos em Javascript</button>
-        <button class="botao">Criar um portfolio</button>
-        <button class="botao">Atualizar meu currículo</button>
-      </div>
-    </section>
-  </body>
-</html>
-
-const botoes = document.querySelectorAll(".botao");
-
-for (let i = 0; i < botoes.length; i++) {
-  botoes[i].onclick = function () {
-    for (let j = 0; j < botoes.length; j++) {
-      botoes[j].classList.remove("ativo");
-    }
-
-    botoes[i].classList.add("ativo");
-  };
-}
-
-<button class="botao">Botão 1</button>
-<button class="botao">Botão 2</button>
-
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Meu App Customizado</title>
-    <!-- Link para o seu arquivo CSS externo ou a tag style -->
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <div class="container">
-        <h1>Meu Novo Aplicativo</h1>
-        <p>
-            Este é um exemplo de como o HTML se conecta ao CSS. 
-            Note como o container possui bordas arredondadas e o fundo 
-            está personalizado conforme as regras que definimos.
-        </p>
+    <section class="conteudo-principal">
+        <h2 class="titulo-principal">Meus Objetivos do ano<span>_</span></h2>
         
-        <div style="display: flex; justify-content: center; gap: 10px;">
-            <button class="btn-custom">Salvar Alterações</button>
-            <button class="btn-custom">Cancelar</button>
+        <!-- Os 4 botões principais (ficarão na horizontal pelo CSS) -->
+        <div class="linha-horizontal">
+            <button class="botao ativo">Cursos na Alura</button>
+            <button class="botao">Criar projetos em Javascript</button>
+            <button class="botao">Criar um portfolio</button>
+            <button class="botao">Atualizar meu currículo</button>
         </div>
-    </div>
 
+        <!-- Os 2 botões de baixo que você pediu para continuar -->
+        <div class="linha-baixo">
+            <button class="botao">Botão 1</button>
+            <button class="botao">Botão 2</button>
+        </div>
+    </section>
+
+    <!-- O JavaScript fica escondido aqui dentro da tag script, sem vazar na tela -->
+    <script>
+        const botoes = document.querySelectorAll(".botao");
+
+        for (let i = 0; i < botoes.length; i++) {
+          botoes[i].onclick = function () {
+            for (let j = 0; j < botoes.length; j++) {
+              botoes[j].classList.remove("ativo");
+            }
+            botoes[i].classList.add("ativo");
+          };
+        }
+    </script>
 </body>
 </html>
